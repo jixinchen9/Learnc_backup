@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdint.h>
+#include <inttypes.h>
+//#include "math.h"
+
+/*out here is a global space
+you can put function prototypes here, though header file is good place for those, more organized
+you can declare and define global variables
+uninitialized global variables get initialized to 0*/
+
+int main() {
+	printf("enter integer:\n");
+	int number_01;
+	scanf("%d", &number_01);
+
+	if (number_01 & 1)
+		printf("entry is odd");
+	else
+		printf("entry is even");
+	return 0;
+
+	//in this code, we did bit masking, 1 is the mask
+	//in general, target & mask == mask to test for specific bits
+}

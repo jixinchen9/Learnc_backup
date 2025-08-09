@@ -15,10 +15,12 @@ void remove_multiples(std::list<int>&, std::list<int>::iterator);
 
 //DECLARE the list iterator to advance the sieve
 void advance_sieve(std::list<int>&, int);
-#endif
 
 //DEClare fucntion to factor the input with the primes list
 std::list<int> find_factors(const std::list<int>&, const int);
 /*
 void remove_multiples(std::list<int>&, std::list<int>::iterator);
 */
+
+#endif
+

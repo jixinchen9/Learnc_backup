@@ -1,0 +1,11 @@
+	printf("gimme like 2 numbers:\n");
+	uint8_t number_01, number_02;
+
+	scanf("%" SCNu8, &number_01);
+	scanf("%" SCNu8, &number_02);
+	
+	printf("bitwise AND %d \n", number_01 & number_02);
+	printf("bitwise or %d \n", number_01 | number_02);
+	printf("bitwise xor %d \n", number_01 ^ number_02);
+	printf("bitwise not %d \n", ~number_02);
+	//this last one doesnt quite hit
