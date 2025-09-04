@@ -8,20 +8,30 @@ you can put function prototypes here, though header file is good place for those
 you can declare and define global variables
 uninitialized global variables get initialized to 0*/
 
-int main() {
-	printf("enter integer:\n");
-	uint8_t number_01;
-	scanf("%" SCNu8, &number_01);
+void use_for_pyramids(uint32_t);
 
-	printf("original input: %d\n", number_01);
-	printf("set the 4th, set the 7th: %d\n", number_01 | 0b10010000);
-	printf("clear the 4th, clear the 7th: %d\n", number_01 & (~0b10010000));
+int main() {
+	uint32_t height;
+
+	printf("enter height:\n");
+	scanf("%" SCNu32, &height);
+
+	use_for_pyramids(height);
+
 	return 0;
-	/*
-	* in this code, we did bit setting w OR, in general the bit you want to set are 1 in the mask
-	* then we did bit clearing w AND, the bitmask is such that the bits you want to clear are 0 with others being 1
-	*/
+
 }
+
+void use_for_pyramids(uint32_t height) {
+	
+	for (uint32_t it1 = 0; it1 <= height; it1++) {
+		for (uint32_t it2 = it1; it2 > 0; it2--) {
+			printf("%4d\t", it2);
+		}
+		printf("\n");
+	}
+}
+
 /*
 	hello_world:
 

@@ -1,0 +1,41 @@
+//placeholder
+void use_while_even(uint32_t, uint32_t, uint32_t);
+
+void use_for_even(uint32_t, uint32_t, uint32_t);
+
+int main() {
+	uint32_t number_begin, number_end, total_evens;
+	total_evens = 0;
+	printf("enter begin integer:\n");
+	scanf("%" SCNu32, &number_begin);
+
+	printf("enter begin integer:\n");
+	scanf("%" SCNu32, &number_end);
+
+	use_for_even(number_begin, number_end, total_evens);
+
+	return 0;
+
+}
+void use_while_even(uint32_t begin, uint32_t end, uint32_t evens) {
+	while (begin <= end) {
+		if (++begin % 2 == 0) {
+			printf("%d \n", begin);
+			evens++;
+		}
+	}
+
+	printf("number of even numbers: %d \n", evens);
+}
+
+void use_for_even(uint32_t begin, uint32_t end, uint32_t evens) {
+	uint32_t it1;
+	for (; begin <= end; begin++) {
+		if (!(begin % 2)) {
+			printf("%4d \t", begin);
+			evens++;
+		}
+	}
+
+	printf("\nnumber of even numbers: %d ", evens);
+}
